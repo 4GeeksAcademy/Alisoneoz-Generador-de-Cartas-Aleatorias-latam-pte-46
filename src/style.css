@@ -33,7 +33,8 @@ body {
 }
 
 .simboloAbajo {
-    text-align: right;
+    text-align: left;
+    transform: rotateZ(180deg);
 }
 
 .numero {
