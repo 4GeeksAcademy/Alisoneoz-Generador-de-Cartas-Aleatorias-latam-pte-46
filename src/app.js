@@ -15,6 +15,7 @@ let numero = document.createElement("div")
 numero.classList.add("numero");
 
 
+
 let simboloAbajo = document.createElement("div")
 simboloAbajo.classList.add("simboloAbajo");
 
@@ -27,9 +28,16 @@ divPrincipal.appendChild(carta)
 window.onload = function() {
   
   const simbolos = ["♦","♥" ,"♠", "♣"];
+
+
   const valorDeLaCarta = ["A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K"]
 
   let indexDeValorDeSimbolo = Math.floor(Math.random()*simbolos.length)
+  
+  if(indexDeValorDeSimbolo == 0 || indexDeValorDeSimbolo == 1){
+    simboloAbajo.classList.add("rojo");
+    simboloArriba.classList.add("rojo");
+  }
   let indexDeValorDeCarta = Math.floor(Math.random()*valorDeLaCarta.length)
 
   simboloAbajo.innerText=simbolos[indexDeValorDeSimbolo];
